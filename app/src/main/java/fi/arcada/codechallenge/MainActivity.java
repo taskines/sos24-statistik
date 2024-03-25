@@ -29,15 +29,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private double calcMean(double[] data) {
-        double sum = 0;
-        for (double value : data) {
-            sum += value;
-        }
-        return sum / data.length;
-    }
-
-
     public void buttonHandler(View view) {
 
         String userInput = inputText.getText().toString();
@@ -48,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void buttonHandler2 (View view) {
-        double average = calcMean(values);
+        double average = Statistics.calcMean(values);
         outputText.append("\nMedeltal: " + average);
     }
 }
